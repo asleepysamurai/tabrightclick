@@ -45,3 +45,5 @@ jspm_packages
 
 # distribution zips
 dist
+
+.DS_Store
