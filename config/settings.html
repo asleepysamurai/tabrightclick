@@ -1,0 +1,66 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Right Click Opens Link in New Tab (Correct Order) - User Settings</title>
+    <link rel="stylesheet" type="text/css" href="../css/settings.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h4>Settings</h4>
+            </div>
+            <div class="settings">
+                <div>
+                    <div>When clicking links:</div>
+                    <div class="indent one">
+                        <div>
+                            Middle Click opens link in a new
+                            <select id="link-middle-click">
+                                <option value="fore" class="fore">foreground</option>
+                                <option value="back" class="back" selected>background</option>
+                            </select>
+                            tab.
+                        </div>
+                        <div>
+                            Right Click opens link in a new
+                            <select id="link-right-click">
+                                <option value="fore" class="fore">foreground</option>
+                                <option value="back" class="back" selected>background</option>
+                            </select>
+                            tab.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>When left clicking links:</div>
+                    <div class="indent one">
+                        <div>
+                            <input type="checkbox" id="link-left-click-prevent-new-tab">
+                            <label for="link-left-click-prevent-new-tab">Prevent link opening in a new tab.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notice">
+            <div>
+                <h4>Important Note</h4>
+                <div>After changing settings refresh open tabs to apply changes.</div>
+                <div>To get the context menu right click while holding the shift key.</div>
+            </div>
+        </div>
+        <div class="footer credits">
+            <h4>Credits</h4>
+            <div>Author: Balaganesh Damodaran (bgdam) (<a href="mailto:asleepysamurai@gmail.com">asleepysamurai@gmail.com</a>)</div>
+            <div>
+                Inspired by - <a href="https://chrome.google.com/webstore/detail/right-click-opens-link-in/afalkcagoidkdjdlfoaicbanbfgoamoo" rel="nofollow">Right Click Opens Link in New Tab</a>.
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/settings.js"></script>
+</body>
+
+</html>
