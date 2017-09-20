@@ -33,11 +33,7 @@
         "48": "icons/48.png",
         "128": "icons/128.png"
     },
-    "author": [
-        {
-            "name": "Balaganesh Damodaran",
-            "email": "asleepysamurai@gmail.com"
-    }],
+    "author": "Balaganesh Damodaran <asleepysamurai@gmail.com>",
     "minimum_chrome_version": "20",
     "offline_enabled": true,
     "permissions": [
