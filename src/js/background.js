@@ -43,11 +43,16 @@ function openLink(info, from, next) {
 
                 ++lastIncrement;
 
-                chrome.tabs.create({
+                var tabParams = {
                     url: info.url,
                     active: isActive,
-                    index: activeTab.index + lastIncrement
-                }, function() {
+                    index: activeTab.index + lastIncrement,
+                };
+
+                if (activeTab.cookieStoreId)
+                    tabParams.cookieStoreId = activeTab.cookieStoreId;
+
+                chrome.tabs.create(tabParams, function() {
                     chrome.storage.sync.set({
                         increment: lastIncrement,
                         activeTabId: activeTab.id,
