@@ -47,6 +47,7 @@ function openLink(info, from, next) {
                     url: info.url,
                     active: isActive,
                     index: activeTab.index + lastIncrement,
+                    openerTabId: activeTab.id
                 };
 
                 if (activeTab.cookieStoreId)
