@@ -25,7 +25,7 @@
     }],
     "manifest_version": 2,
     "name": "Right Click Opens Link New Tab Correct Order",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Same as 'Right Click Opens Link in New Tab', but now when opening multiple tabs, the tabs are inserted in the correct order.",
     "icons": {
         "16": "icons/16.png",
