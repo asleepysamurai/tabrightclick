@@ -12,22 +12,22 @@
 
     function setupMutationHelpers(onMouseDown, onMouseUp, onContextMenu) {
         function mutationChecker(nodeList) {
-            Array.prototype.forEach.call(nodeList, function(node) {
-                if (node instanceof window.HTMLAnchorElement) {
-                    node.addEventListener('mouseup', onMouseUp);
-                    node.addEventListener('mousedown', onMouseDown);
-                    node.addEventListener('contextmenu', onContextMenu);
-                }
+            function safeAddEventListener(event, listener, node) {
+                node.removeEventListener(event, listener);
+                node.addEventListener(event, listener);
+            };
 
-                if (node.childNodes && node.childNodes.length)
-                    mutationChecker(node.childNodes);
+            document.querySelectorAll('a').forEach(node => {
+                safeAddEventListener('mouseup', onMouseUp, node);
+                safeAddEventListener('mousedown', onMouseDown, node);
+                safeAddEventListener('contextmenu', onContextMenu, node);
             });
         }
 
         let observer = new MutationObserver(function(records) {
-            records.forEach(function(record) {
-                mutationChecker(record.addedNodes);
-            });
+            //records.forEach(function(record) {
+            mutationChecker();
+            //});
         });
 
         observer.observe(document.documentElement, {
