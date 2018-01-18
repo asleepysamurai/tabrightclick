@@ -3,7 +3,6 @@
 function shouldTabBeActive(info, next) {
     var defaultSettings = {
         'link-right-click': 'back',
-        'link-middle-click': 'back',
         'link-left-click-prevent-new-tab': false
     };
 

@@ -80,7 +80,7 @@
         if (wasDragged(ev))
             return;
 
-        var clickedButton = [null, 'middle', 'right'][ev.button];
+        var clickedButton = [null, null, 'right'][ev.button];
         if (!clickedButton)
             return;
 
